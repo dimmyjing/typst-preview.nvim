@@ -38,7 +38,11 @@ function M.ensure_registered()
   vim.api.nvim_create_autocmd('LspDetach', {
     group = id,
     callback = function(ev)
-      manager.remove({ client = ev.data.client }, 'server detached')
+      local path = utils.get_main_file(ev.buf)
+      manager.remove(
+        { client = ev.data.client, path = path },
+        'server detached'
+      )
     end,
   })
 
