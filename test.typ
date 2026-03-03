@@ -2,17 +2,21 @@
 
 #show link: underline
 #set page(
- margin: (x: 0.9cm, y: 1.3cm),
+  margin: (x: 0.9cm, y: 1.3cm),
 )
 #set par(justify: true)
 
-#let chiline() = {v(-3pt); line(length: 100%); v(-5pt)}
+#let chiline() = {
+  v(-3pt)
+  line(length: 100%)
+  v(-5pt)
+}
 
 #show text: set text(size: 18pt)
 
 = Someone's CV
 
-someone\@some-university.edu 
+someone\@some-university.edu
 
 == Education
 #chiline()
