@@ -120,7 +120,7 @@ function PreviewTask:spawn(on_error, on_link_set)
     '--task-id',
     self.task_id,
     '--data-plane-host',
-    config.opts.host .. config.opts.port,
+    config.opts.host .. ':' .. config.opts.port,
     '--root',
     config.opts.get_root(self.path),
   }
